@@ -16,7 +16,7 @@ Player.Idled:Connect(preventAFK)
 
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/OMEGADEZZ/libreria-hz/refs/heads/main/libreria", true))()
 
-local window = library:AddWindow("👑JohanXMax Paid v2👑"), {
+local window = library:AddWindow("OMEGADEZZ HUB | PAID Ultra Premiun / By HonnyDezz", {
     main_color = Color3.fromRGB(0, 0, 255),
     min_size = Vector2.new(710, 780),
     can_resize = true,
@@ -4500,7 +4500,7 @@ end)
 
 local Credits = window:AddTab("CREDITOS")
 
-Credits:AddLabel("JOHANxMAX / Script OP")
+Credits:AddLabel("JxM Paid / Script OP")
 Credits:AddLabel("Script Creado por:")
-Credits:AddLabel("Johan / Colaborador Max)
-Credits:AddLabel("JX7 ON TOP 👑")
+Credits:AddLabel("Johan / Colaborador Max")
+Credits:AddLabel("JX7 ON TOP👑")
