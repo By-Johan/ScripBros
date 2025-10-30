@@ -1,7 +1,7 @@
 local whitelist = {
     ["Mex_ej"] = true,
     ["fresade80"] = true,
-    [""] = true,
+    ["DTH_KILLS"] = true,
     [""] = true,
     [""] = true,
     [""] = true,
@@ -67,7 +67,7 @@ local player = game.Players.LocalPlayer
 local displayName = player.DisplayName or player.Name
 
 local window = library:AddWindow("JohanXMax | Bienvenido a Casa ".. displayName, {
-    main_color = Color3.fromRGB(255, 119, 0),
+    main_color = Color3.fromRGB(0, 0, 0),
     min_size = Vector2.new(710, 780),
     can_resize = true,
 })
