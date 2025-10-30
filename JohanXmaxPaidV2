@@ -1,7 +1,7 @@
 local whitelist = {
     ["Fresade80"] = true,
     ["Mex_ej"] = true,
-    [""] = true,
+    ["DTH_KILLS"] = true,
     [""] = true,
     [""] = true,
     [""] = true,
