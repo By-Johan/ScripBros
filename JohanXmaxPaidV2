@@ -43,7 +43,7 @@ local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 
 if not whitelist[LocalPlayer.Name] then
-    LocalPlayer:Kick("Tu IP asido enviado al correo de Johan LMAO💀🤡")
+    LocalPlayer:Kick(Tu IP Asido capturada💀🤡")
 end
 
 local Players = game:GetService("Players")
@@ -66,8 +66,8 @@ local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/rafae
 local player = game.Players.LocalPlayer
 local displayName = player.DisplayName or player.Name
 
-local window = library:AddWindow("👑 JohanXMax Paid v2 👑 | Bienvenido a casa ".. displayName, {
-    main_color = Color3.fromRGB(0, 0, 255),
+local window = library:AddWindow("👑 JohanXMax 🔥| Bienvenido a Casa ".. displayName, {
+    main_color = Color3.fromRGB(0, 0, 0),
     min_size = Vector2.new(710, 780),
     can_resize = true,
 })
