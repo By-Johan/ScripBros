@@ -47,14 +47,14 @@ if not whitelist[LocalPlayer.Name] then
 end
 
 -- CARGA DE LIBRERÍA
-local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/rafael25ic-blip/phoenix-cracked/refs/heads/main/Librerya%20Phoenix%20Crack"))()
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/By-Johan/Library-by-Johan/refs/heads/main/Icono"))()
 
 -- OBTENER NOMBRE DEL JUGADOR
 local player = game.Players.LocalPlayer
 local displayName = player.DisplayName or player.Name
 
 -- VENTANA PRINCIPAL
-local window = library:AddWindow("INFERNO PAID V4 | Bienvenido " .. displayName, {
+local window = library:AddWindow("INFERNO PAID V4 | Bienvenido - " .. displayName, {
     main_color = Color3.fromRGB(0, 0, 0),
     min_size = Vector2.new(600, 820),
     can_resize = false,
