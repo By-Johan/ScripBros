@@ -1143,29 +1143,36 @@ AutoFarm:AddSwitch("Anti AFK", function(state)
     end
 end)
 
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
 AutoFarm:AddSwitch("Anti Knockback", function(Value)
-    safeCall(function()
+    pcall(function()
+        local character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
+        local rootPart = character and character:FindFirstChild("HumanoidRootPart")
+
+        if not rootPart then 
+            return 
+        end
+
+        local BODY_VELOCITY_NAME = "AntiKnockbackBodyVelocity"
+        local MAX_FORCE_VALUE = Vector3.new(100000, 0, 100000)
+        local existingVelocity = rootPart:FindFirstChild(BODY_VELOCITY_NAME)
+
         if Value then
-            local playerName = game.Players.LocalPlayer.Name
-            local rootPart = game.Workspace:FindFirstChild(playerName):FindFirstChild("HumanoidRootPart")
-            if rootPart then
-                local bodyVelocity = Instance.new("BodyVelocity")
-                bodyVelocity.MaxForce = Vector3.new(100000, 0, 100000)
-                bodyVelocity.Velocity = Vector3.new(0, 0, 0)
-                bodyVelocity.P = 1250
-                bodyVelocity.Parent = rootPart
+            if existingVelocity then
+                existingVelocity:Destroy()
             end
+
+            local bodyVelocity = Instance.new("BodyVelocity")
+            bodyVelocity.Name = BODY_VELOCITY_NAME
+            bodyVelocity.MaxForce = MAX_FORCE_VALUE
+            bodyVelocity.Velocity = Vector3.new(0, 0, 0)
+            bodyVelocity.P = 1250
+            bodyVelocity.Parent = rootPart
         else
-            local playerName = game.Players.LocalPlayer.Name
-            local character = game.Workspace:FindFirstChild(playerName)
-            if character then
-                local rootPart = character:FindFirstChild("HumanoidRootPart")
-                if rootPart then
-                    local existingVelocity = rootPart:FindFirstChild("BodyVelocity")
-                    if existingVelocity and existingVelocity.MaxForce == Vector3.new(100000, 0, 100000) then
-                        existingVelocity:Destroy()
-                    end
-                end
+            if existingVelocity and existingVelocity:IsA("BodyVelocity") and existingVelocity.MaxForce == MAX_FORCE_VALUE then
+                existingVelocity:Destroy()
             end
         end
     end)
