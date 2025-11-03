@@ -66,8 +66,8 @@ local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/By-Jo
 local player = game.Players.LocalPlayer
 local displayName = player.DisplayName or player.Name
 
-local window = library:AddWindow("JohanXMax Hub V2 | Bienvenido - ".. displayName, {
-    main_color = Color3.fromRGB(0, 0, 0),
+local window = library:AddWindow("JohanXMax Hub V3 | Bienvenido - ".. displayName, {
+    main_color = Color3.fromRGB(255, 0, 0),
     min_size = Vector2.new(710, 780),
     can_resize = true,
 })
@@ -1413,7 +1413,7 @@ task.spawn(function()
     end
 end)
 
-local Killer = window:AddTab("KILL")
+local Killer = window:AddTab("KILLS OP")
 
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
@@ -3852,7 +3852,7 @@ end)
 
 
 
-local Calculadora = window:AddTab("CALCULATOR", Color3.fromRGB(200, 100, 100))
+local Calculadora = window:AddTab("CALCULATOR 1", Color3.fromRGB(200, 100, 100))
 
 local baseStrength = 0
 local resultadoLabelsDamage = {}
@@ -3972,7 +3972,7 @@ FolderDurabilidad:AddButton("Calcular Durabilidad", function()
     end
 end)
 
-local features = window:AddTab("CALCULATE STATS")
+local features = window:AddTab("CALCULATE STATS 2")
 features:Show()
 
 local player = game.Players.LocalPlayer
