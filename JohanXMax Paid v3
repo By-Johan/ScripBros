@@ -3972,7 +3972,7 @@ FolderDurabilidad:AddButton("Calcular Durabilidad", function()
     end
 end)
 
-local features = window:AddTab("CALCULATE STATS 2")
+local features = window:AddTab("CALCULATE STATS")
 features:Show()
 
 local player = game.Players.LocalPlayer
